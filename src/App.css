@@ -7,6 +7,30 @@
     font-style: normal;
     font-display: swap;
   }
+@-webkit-keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
 
 #root {
   max-width: 1280px;
@@ -22,13 +46,62 @@
   top:0
 }
 .menu-options-stack{
-  margin-right:45vw;
+  width: 67vw;
 }
-Button {
-  transition-duration: 0s !important;
+.menu-right-bar{
+  width: 33vw;
+}
+.intro-text{
+  -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  font-family: "MesloFont";
+  font-size: large;
+  font-size: 50px;
+}
+.intro-hi{
+  color: #d79921;
+  font-family: "MesloFont";
+  font-weight: bold;
+}
+.intro-name{
+  color: #cc241d;
+  font-family: "MesloFont";
+  font-weight: bold;
+}
+.intro-section{
+  place-content: center;
+}
+.intro-middle-text{
+  color: #fbf1c7;
+}
+.portrait-img{
+  width: 20vw;
+  height: 52vh;
+  border-radius: 60px;
+  border-color: #458588;
+  border-width: 5px;
+  border-style: solid;
+}
+.horizontal-line{
+  border-bottom: 0.5px solid #b16286;; /* Creates a 1px solid black line at the bottom */
+  width: 100%; /* Spans the full width of its parent */
+  border-radius: 2px;
+}
+.work-section{
+  margin-top: 10vh;
+}
+.about-me{
+  margin-top: 10vh;
 }
 h3 {
   font-family: "MesloFont";
   text-transform: lowercase;
   color: #fbf1c7;
+  font-size: 13px;
+}
+
+h4 {
+  font-family: "Meslofont";
+  color:#fbf1c7;
+  font-size: 30px;
 }
