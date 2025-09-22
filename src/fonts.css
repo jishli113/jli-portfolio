@@ -1,0 +1,7 @@
+    @font-face {
+      font-family: 'MesloFont';
+      src: url('./fonts/MesloLGS-Regular.ttf') format('meslo-reg');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }

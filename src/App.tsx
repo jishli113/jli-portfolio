@@ -1,26 +1,28 @@
-import { useState } from 'react'
+
+import { AppBar, Box, Toolbar, Button, Stack} from '@mui/material'
+import { useRef } from 'react';
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <h1>Hello World</h1>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    <Box className="app-bar">
+    <AppBar className="menu-bar" position="static" color="transparent" elevation={0}>
+      <Toolbar>
+        <Stack direction="row" spacing={1} className='menu-options-stack'>
+          <Button disableRipple><h3>home</h3></Button>
+          <Button disableRipple><h3>experience</h3></Button>
+          <Button disableRipple><h3>projects</h3></Button>
+          <Button disableRipple><h3>skills</h3></Button>
+        </Stack>
+        <Stack direction="row" spacing={1}>
+          <Button disableRipple><h3>resume</h3></Button>
+          <Button disableFocusRipple disableTouchRipple><h3>about me</h3></Button>
+        </Stack>
+      </Toolbar>
+    </AppBar>
+    </Box>
     </>
   )
 }
