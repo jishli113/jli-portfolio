@@ -68,9 +68,6 @@
   font-family: "MesloFont";
   font-weight: bold;
 }
-.intro-section{
-  place-content: center;
-}
 .intro-middle-text{
   color: #fbf1c7;
 }
@@ -78,20 +75,40 @@
   width: 20vw;
   height: 52vh;
   border-radius: 60px;
-  border-color: #458588;
+  border-color: #d79921;
   border-width: 5px;
   border-style: solid;
 }
 .horizontal-line{
-  border-bottom: 0.5px solid #b16286;; /* Creates a 1px solid black line at the bottom */
+  position:absolute;
+  border-top: 0.5px solid #fbf1c7;
   width: 100%; /* Spans the full width of its parent */
   border-radius: 2px;
+  top:50%;
+}
+.work-section-title-line-div{
+  position:relative;
+  width: 65%;
+
+}
+.work-section-title{
+  width: 100vw;
 }
 .work-section{
-  margin-top: 10vh;
+  margin-top: 5vh;
+  width: 100%;
+  place-items: center;
 }
-.about-me{
-  margin-top: 10vh;
+.work-section-work-div{
+  width: 20%;
+  align-items: end;
+  text-align:end;
+}
+.work-stack{
+  width: 60%;
+}
+.work-card{
+  background-color: #282828;
 }
 h3 {
   font-family: "MesloFont";
@@ -104,4 +121,10 @@ h4 {
   font-family: "Meslofont";
   color:#fbf1c7;
   font-size: 30px;
+}
+
+h5{
+  font-family: "Meslofont";
+  color:#fbf1c7;
+  font-size: 20px;
 }

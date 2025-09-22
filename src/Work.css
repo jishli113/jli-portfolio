@@ -1,0 +1,30 @@
+h1{
+    font-family: "MesloFont";
+  text-transform: lowercase;
+  color: #d79921;
+  font-size: 20px;
+  font-weight: bold;
+}
+.work-card{
+    background-color: #282828;
+    width: 100%;
+}
+h2{
+    font-family: "MesloFont";
+  text-transform: lowercase;
+  color: #fbf1c7;
+  font-size: 14px;
+}
+h3{
+    font-family: "MesloFont";
+  text-transform: lowercase;
+  color: #fbf1c7;
+  font-size: 16px;
+}
+
+h5{
+    font-family: "MesloFont";
+  text-transform: lowercase;
+  color: #fbf1c7;
+  font-size: 13px;
+}

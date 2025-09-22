@@ -1,0 +1,32 @@
+{
+    "works":[
+    {
+        "workplace": "aws",
+        "workTitle": "sde intern",
+        "workDates": "june 2025 - sep 2025",
+        "description": "worked with the q business to create an internal dashboard harnessing aws infrastructure such as lambda, dynamodb, s3, and stepfunctions revealing critical insights for identifying os/es cluster anomalies.",
+        "location": "nyc"
+    },
+    {
+        "workplace": "rimini street",
+        "workTitle": "swe intern",
+        "workDates": "sep 2024 - dec 2024",
+        "description": "built an ai-powered email summarization pipeline in python harnessing abstractive text summarization with models such as BART and Llama.",
+        "location":"remote"
+    },
+    {
+        "workplace": "uc santa cruz",
+        "workTitle": "undergrad student researcher",
+        "workDates": "sep 2024 - may 2025",
+        "description": "differentiable simulators with professor razvan marinescu.",
+        "location":"santa cruz"
+    },
+    {
+        "workplace": "stealth startup",
+        "workTitle": "computer vision engineer",
+        "workDates": "june 2024 - sep 2024",
+        "description": "developed an end to end cv pipeline using YOLOv5, unsupervised machine learning techniques, and color quantization to classify hockey players by team with over 80% accuracy.",
+        "location":"remote"
+    }
+]
+}
