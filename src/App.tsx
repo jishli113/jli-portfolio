@@ -1,17 +1,17 @@
 
 import { AppBar, Box, Toolbar, Button, Stack} from '@mui/material'
 import './App.css'
-import Work from './Work';
+// import Work from './Work';
 
 function App() {
-  const workPlaces: string[] = ["aws", "rimini street", "uc santa cruz"];
-  const workTitles: string[] = ["sde intern", "swe intern", "undergraduate student researcher"];
-  const workDates: string[] = ["june 2025 - sep 2025"];
-  const descriptions: string[] = ["q business", "ai-powered email summarizations", "differentiable simulators with prof. razvan marinescu"];
+  // const workPlaces: string[] = ["aws", "rimini street", "uc santa cruz"];
+  // const workTitles: string[] = ["sde intern", "swe intern", "undergraduate student researcher"];
+  // const workDates: string[] = ["june 2025 - sep 2025"];
+  // const descriptions: string[] = ["q business", "ai-powered email summarizations", "differentiable simulators with prof. razvan marinescu"];
 
-  const start = 0;
-  const end = workPlaces.length;
-  const range = Array.from({ length: end - start + 1 }, (_, i) => start + i);
+  // const start = 0;
+  // const end = workPlaces.length;
+  // const range = Array.from({ length: end - start + 1 }, (_, i) => start + i);
 
   return (
     <>
@@ -50,9 +50,9 @@ function App() {
 
     <Box className="about-me">
       <img src='../public/images/portrait.png' className='portrait-img'></img>
-      {range.map((num) => (
+      {/* {range.map((num) => (
         <Work/>
-      ))}
+      ))} */}
     </Box>
     </>
   )
