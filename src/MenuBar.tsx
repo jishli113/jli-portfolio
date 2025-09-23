@@ -6,10 +6,10 @@ function MenuBar() {
     <AppBar className="menu-bar" position="static" style={{backgroundColor:'#282828'}} elevation={0}>
       <Toolbar>
         <Stack direction="row" spacing={1} className='menu-options-stack'>
-          <Button disableRipple><h3>home</h3></Button>
-          <Button disableRipple><h3>experience</h3></Button>
-          <Button disableRipple><h3>projects</h3></Button>
-          <Button disableRipple><h3>skills</h3></Button>
+          <Button disableRipple><h3 className="appbar-text">home</h3></Button>
+          <Button disableRipple><h3 className="appbar-text">experience</h3></Button>
+          <Button disableRipple><h3 className="appbar-text">projects</h3></Button>
+          <Button disableRipple><h3 className="appbar-text">skills</h3></Button>
         </Stack>
         <Stack direction="row" spacing={1} className="menu-right-bar">
           <Button disableRipple><h3>resume</h3></Button>
