@@ -10,10 +10,10 @@ function MenuBar() {
           <Button disableRipple><h3 className="appbar-text">experience</h3></Button>
           <Button disableRipple><h3 className="appbar-text">projects</h3></Button>
           <Button disableRipple><h3 className="appbar-text">skills</h3></Button>
+          <Button disableFocusRipple disableTouchRipple><h3 className="appbar-text">about me</h3></Button>
         </Stack>
         <Stack direction="row" spacing={1} className="menu-right-bar">
-          <Button disableRipple><h3>resume</h3></Button>
-          <Button disableFocusRipple disableTouchRipple><h3>about me</h3></Button>
+          <Button disableRipple><h3 className="appbar-text">resume</h3></Button>
         </Stack>
       </Toolbar>
     </AppBar>

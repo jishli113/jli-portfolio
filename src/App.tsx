@@ -27,11 +27,11 @@ function App() {
       <Box position="absolute" left="10%">
         <Stack direction="column" spacing="3%" textAlign="start">
           <Box>
-            <p className="intro-text">
+            <span className="intro-text">
               <span className='intro-hi'>hi! </span>
               <span className='intro-middle-text'>my name is </span>
               <span className="intro-name">josh.</span>
-            </p>
+            </span>
           </Box>
           <Stack direction="column" spacing="1%">
             <h5>uc santa cruz '26</h5>

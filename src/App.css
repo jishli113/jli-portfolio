@@ -38,13 +38,6 @@
   padding: 2rem;
   text-align: center;
 }
-.intro-text{
-  -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-	animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-  font-family: "MesloFont";
-  font-size: large;
-  font-size: 50px;
-}
 .intro-hi{
   color: #d79921;
   font-family: "MesloFont";
@@ -120,4 +113,27 @@ h5{
   font-family: "Meslofont";
   color:#fbf1c7;
   font-size: 30px;
+}
+
+.intro-text {
+  display: inline-block;              /* allow width to animate */
+  font-size: 45px;
+  overflow: hidden;                   /* hide until "typed" */
+  border-right: .15em solid orange;   /* cursor */
+  white-space: nowrap;
+  letter-spacing: .15em;
+  width: 0;                           /* start hidden */
+  animation:
+    typing 3.5s steps(20, end) forwards,
+    blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to   { width: 22ch }                /* adjust chars to your text length */
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
 }
