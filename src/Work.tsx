@@ -10,7 +10,7 @@ function Work(props: any) {
                         <h1 className='work-card-workplace'>
                         {props.workplace}
                         </h1>
-                        <h3>
+                        <h3 className="work-card-worktitle">
                             {props.workTitle}
                         </h3>
                     </Stack>
