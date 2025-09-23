@@ -1,6 +1,7 @@
 .app-bar{
   place-content: left;
   width: 100vw;
+  top:0;
 }
 .menu-bar{
   top:0
