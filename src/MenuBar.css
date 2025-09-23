@@ -1,0 +1,19 @@
+.app-bar{
+  place-content: left;
+  width: 100vw;
+}
+.menu-bar{
+  top:0
+}
+.menu-options-stack{
+  width: 67vw;
+}
+.menu-right-bar{
+  width: 33vw;
+}
+h3 {
+  font-family: "MesloFont";
+  text-transform: lowercase;
+  color: #fbf1c7;
+  font-size: 13px;
+}

@@ -1,10 +1,10 @@
 {
     "works":[
     {
-        "workplace": "aws",
+        "workplace": "amazon web services",
         "workTitle": "sde intern",
         "workDates": "june 2025 - sep 2025",
-        "description": "worked with the q business to create an internal dashboard harnessing aws infrastructure such as lambda, dynamodb, s3, and stepfunctions revealing critical insights for identifying os/es cluster anomalies.",
+        "description": "worked with the q business team to create an internal dashboard harnessing aws infrastructure such as lambda, dynamodb, s3, and stepfunctions revealing critical insights for identifying os/es cluster anomalies.",
         "location": "nyc"
     },
     {
@@ -27,6 +27,13 @@
         "workDates": "june 2024 - sep 2024",
         "description": "developed an end to end cv pipeline using YOLOv5, unsupervised machine learning techniques, and color quantization to classify hockey players by team with over 80% accuracy.",
         "location":"remote"
+    },
+    {
+        "workplace": "tech4good",
+        "workTitle":"web developer",
+        "workDates":"june 2023 - june 2024",
+        "description": "designed and implemented web components for the tech4good annota site with angular and typescript.",
+        "location":"santa cruz"
     }
 ]
 }

@@ -1,0 +1,19 @@
+{
+    "projects":
+    [
+        {
+            "title":"DL Image Classification Model with Semi-Supervised Learning",
+            "date":"june 2024",
+            "description":"i trained an image classification model with a resnet-18 backbone in pytorch to classify 15 leaf and 120 dog categories, using semi-supervised learning to leverage unlabeled images and improve performance.",
+            "github":"https://github.com/jishli113/Semi-Supervised-Image-Classification",
+            "tools":["python","pytorch","deep learning","machine learning","pandas", "numpy"]
+        },
+        {
+            "title":"Chess Analysis Chrome Extension",
+            "date":"feb 2024",
+            "description":"This google chrome extension allows users to immediately transport their Chess.com games into a Lichess analysis board through web scraping. Users also have the capabilities of creating an account and saving certain games for future quick access. Persisted authentication and database procedures are handled using firebase. the code is written using Javascript and utilizes the Google Chrome and Lichess APIs.",
+            "github":"https://github.com/jishli113/Semi-Supervised-Image-Classification",
+            "tools":["javascript","nodejs","firebase","chesscom api"]
+        }
+    ]
+}

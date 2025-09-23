@@ -1,13 +1,17 @@
 
-import { AppBar, Box, Toolbar, Button, Stack, Link} from '@mui/material'
+import {Box, Stack, Link, Grid} from '@mui/material'
 import Work from './Work'
 import './App.css'
 import works from "./values/work.json"
+import projects from './values/projects.json'
 import {type workInterface} from "./json-interfaces/workInterface"
+import { type projectInterface} from './json-interfaces/projectInterface'
 import { Email, LinkedIn, GitHub } from '@mui/icons-material'
+import Project from './Project'
 
 function App() {
   const worksStore: workInterface[] = works.works;
+  const projectStore: projectInterface[] = projects.projects;
   // const workPlaces: string[] = ["aws", "rimini street", "uc santa cruz"];
   // const workTitles: string[] = ["sde intern", "swe intern", "undergraduate student researcher"];
   // const workDates: string[] = ["june 2025 - sep 2025"];
@@ -19,22 +23,6 @@ function App() {
 
   return (
     <>
-    <Box className="app-bar">
-    <AppBar className="menu-bar" position="static" color="transparent" elevation={0}>
-      <Toolbar>
-        <Stack direction="row" spacing={1} className='menu-options-stack'>
-          <Button disableRipple><h3>home</h3></Button>
-          <Button disableRipple><h3>experience</h3></Button>
-          <Button disableRipple><h3>projects</h3></Button>
-          <Button disableRipple><h3>skills</h3></Button>
-        </Stack>
-        <Stack direction="row" spacing={1} className="menu-right-bar">
-          <Button disableRipple><h3>resume</h3></Button>
-          <Button disableFocusRipple disableTouchRipple><h3>about me</h3></Button>
-        </Stack>
-      </Toolbar>
-    </AppBar>
-    </Box>
     <Box className="intro-section" position="relative" marginBottom="38%" marginTop="5%">
       <Box position="absolute" left="10%">
         <Stack direction="column" spacing="3%" textAlign="start">
@@ -86,6 +74,25 @@ function App() {
         </>
       ))}
       </Stack>
+    </Box>
+    <Box className="project-section">
+      <Stack direction={'row'} spacing={2} className="work-section-title">
+        <Box className="work-section-work-div">
+          <h4>projects</h4>
+        </Box>
+        <Box className="work-section-title-line-div">
+          <div className="horizontal-line"></div>
+        </Box>
+      </Stack>
+      <Box alignItems="center">
+        <Grid container spacing={{ xs: 3, md: 4 }} columns={{ xs: 4, sm: 8, md: 12 }}>
+            {Array.from(projectStore).map((project) => (
+              <Grid size={{ xs: 2, sm: 4, md: 4 }}>
+                <Project title = {project.title} description = {project.description} tools={project.tools} className="project"/>
+              </Grid>
+            ))}
+</Grid>
+      </Box>
     </Box>
     </>
   )

@@ -38,19 +38,6 @@
   padding: 2rem;
   text-align: center;
 }
-.app-bar{
-  place-content: left;
-  width: 100vw;
-}
-.menu-bar{
-  top:0
-}
-.menu-options-stack{
-  width: 67vw;
-}
-.menu-right-bar{
-  width: 33vw;
-}
 .intro-text{
   -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 	animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
@@ -110,6 +97,12 @@
 .work-card{
   background-color: #282828;
 }
+.project{
+    border-radius: 5px;
+    border-width: 30px;
+    border-color: #d79921;
+    width: 100%;
+}
 h3 {
   font-family: "MesloFont";
   text-transform: lowercase;
@@ -126,5 +119,5 @@ h4 {
 h5{
   font-family: "Meslofont";
   color:#fbf1c7;
-  font-size: 20px;
+  font-size: 30px;
 }
