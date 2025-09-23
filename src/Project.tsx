@@ -3,7 +3,8 @@ import './Project.css'
 function Project(props: any) {
     return (
         <>
-        <Card className="project-card" sx={{borderRadius: "16px", padding:"2px", backgroundColor:"#282828"}}>
+        <Card className="project-card" sx={{borderRadius: "16px", padding:"2px", backgroundColor:"#282828", '&:hover': {
+          boxShadow: 8,cursor:"pointer"}}}>
                 <Stack direction="column" spacing="6%" textAlign="start" sx={{margin:"4px"}}>
                     <h3 className="project-title-text">
                         {props.title}
