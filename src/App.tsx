@@ -9,7 +9,7 @@ import { type projectInterface} from './json-interfaces/projectInterface'
 import { Email, LinkedIn, GitHub } from '@mui/icons-material'
 import Project from './Project'
 import { useRef } from 'react'
-import portrait from "../public/images/portrait.png"
+import portrait from "./public/images/portrait.png"
 
 function App() {
   const workRef = useRef<HTMLDivElement | null>(null);
