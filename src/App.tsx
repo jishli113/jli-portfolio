@@ -9,6 +9,7 @@ import { type projectInterface} from './json-interfaces/projectInterface'
 import { Email, LinkedIn, GitHub } from '@mui/icons-material'
 import Project from './Project'
 import { useRef } from 'react'
+import portrait from "../public/images/portrait.png"
 
 function App() {
   const workRef = useRef<HTMLDivElement | null>(null);
@@ -73,7 +74,7 @@ function App() {
         </Stack>
       </Box>
       <Box position="absolute" right="10%">
-      <img src='./public/images/portrait.png' className='portrait-img'></img>
+      <img src={portrait} className='portrait-img'></img>
     </Box>
     </Box>
     <Box className="work-section" ref={workRef}>
