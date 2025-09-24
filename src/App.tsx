@@ -134,7 +134,7 @@ function App() {
       <Box>
         <h4 className='about-me-text'>my name is joshua li and i am currently a junior at the university of california santa cruz majoring in computer science and minoring in mathematics. i love developing software,
            especially with new languages and frameworks. some fields that interest me are ai/ml, distributed systems, and backend development.
-            outside of computer science i love exercise, more specifically basketball and running, exploring new food spots, travelling, snowboarding, and playing chess.</h4>
+            outside of computer science i love exercise, more specifically basketball and running, exploring new food spots, travelling, snowboarding, and playing <a href='https://www.chess.com/member/jishhhhhhhhhh'>chess</a>.</h4>
       </Box>
     </Box>
     </>
