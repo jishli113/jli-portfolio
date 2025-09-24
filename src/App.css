@@ -51,7 +51,10 @@
   width: 100vw;
 }
 .work-section{
-  margin-top: 5vh;
+  width: 100%;
+  place-items: center;
+}
+.project-section{
   width: 100%;
   place-items: center;
 }
