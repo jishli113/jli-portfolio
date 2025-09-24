@@ -9,8 +9,8 @@ import { type projectInterface} from './json-interfaces/projectInterface'
 import { Email, LinkedIn, GitHub } from '@mui/icons-material'
 import Project from './Project'
 import { useRef } from 'react'
-import portrait from "./public/images/portrait.png"
-import resumePdf from "./public/static/jli-resume.pdf"
+import portrait from "../public/images/portrait.png"
+import resumePdf from "../public/static/jli-resume.pdf"
 
 function App() {
   const workRef = useRef<HTMLDivElement | null>(null);
