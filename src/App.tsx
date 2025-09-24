@@ -1,5 +1,5 @@
 
-import {Box, Stack, Link, Grid} from '@mui/material'
+import {Box, Stack, Link, Grid, AppBar, Button, Toolbar} from '@mui/material'
 import Work from './Work'
 import './App.css'
 import works from "./values/work.json"
@@ -8,22 +8,41 @@ import {type workInterface} from "./json-interfaces/workInterface"
 import { type projectInterface} from './json-interfaces/projectInterface'
 import { Email, LinkedIn, GitHub } from '@mui/icons-material'
 import Project from './Project'
+import { useRef } from 'react'
 
 function App() {
+  const workRef = useRef<HTMLDivElement | null>(null);
+  const projectsRef = useRef<HTMLDivElement | null>(null);
+  const homeRef = useRef<HTMLDivElement | null>(null);
   const worksStore: workInterface[] = works.works;
   const projectStore: projectInterface[] = projects.projects;
-  // const workPlaces: string[] = ["aws", "rimini street", "uc santa cruz"];
-  // const workTitles: string[] = ["sde intern", "swe intern", "undergraduate student researcher"];
-  // const workDates: string[] = ["june 2025 - sep 2025"];
-  // const descriptions: string[] = ["q business", "ai-powered email summarizations", "differentiable simulators with prof. razvan marinescu"];
-
-  // const start = 0;
-  // const end = workPlaces.length;
-  // const range = Array.from({ length: end - start + 1 }, (_, i) => start + i);
-
+  const handleWorkScrollClick = () =>{
+        workRef.current?.scrollIntoView({"behavior":"smooth"});
+  };
+  const handleHomeScrollClick = () =>{
+        homeRef.current?.scrollIntoView({"behavior":"smooth"});
+  };
+  const handleProjectScrollClick = () =>{
+        projectsRef.current?.scrollIntoView({"behavior":"smooth"});
+  };
   return (
     <>
-    <Box className="intro-section" position="relative" marginBottom="38%" marginTop="5%">
+    <Box className="app-bar" position="fixed" zIndex={1000}>
+    <AppBar className="menu-bar" position="static" style={{backgroundColor:'#282828'}} elevation={0}>
+      <Toolbar>
+        <Stack direction="row" spacing={1} className='menu-options-stack'>
+          <Button disableRipple onClick={handleHomeScrollClick}><h3 className="appbar-text">home</h3></Button>
+          <Button disableRipple onClick={handleWorkScrollClick}><h3 className="appbar-text">experience</h3></Button>
+          <Button disableRipple onClick={handleProjectScrollClick}><h3 className="appbar-text">projects</h3></Button>
+          <Button disableFocusRipple disableTouchRipple><h3 className="appbar-text">about me</h3></Button>
+        </Stack>
+        <Stack direction="row" spacing={1} className="menu-right-bar">
+          <Button disableRipple><h3 className="appbar-text">resume</h3></Button>
+        </Stack>
+      </Toolbar>
+    </AppBar>
+    </Box>
+    <Box className="intro-section"  ref = {homeRef} position="relative" marginBottom="38%" marginTop="5%">
       <Box position="absolute" left="10%">
         <Stack direction="column" spacing="3%" textAlign="start">
           <Box>
@@ -57,7 +76,7 @@ function App() {
       <img src='../public/images/portrait.png' className='portrait-img'></img>
     </Box>
     </Box>
-    <Box className="work-section">
+    <Box className="work-section" ref={workRef}>
       <Stack direction={'row'} spacing={2} className="work-section-title">
         <Box className="work-section-work-div">
           <h4>work</h4>
@@ -75,7 +94,7 @@ function App() {
       ))}
       </Stack>
     </Box>
-    <Box className="project-section">
+    <Box className="project-section" ref={projectsRef}>
       <Stack direction={'row'} spacing={2} className="work-section-title">
         <Box className="work-section-work-div">
           <h4>projects</h4>
