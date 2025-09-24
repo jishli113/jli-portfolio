@@ -7,30 +7,6 @@
     font-style: normal;
     font-display: swap;
   }
-@-webkit-keyframes text-focus-in {
-  0% {
-    -webkit-filter: blur(12px);
-            filter: blur(12px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-filter: blur(0px);
-            filter: blur(0px);
-    opacity: 1;
-  }
-}
-@keyframes text-focus-in {
-  0% {
-    -webkit-filter: blur(12px);
-            filter: blur(12px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-filter: blur(0px);
-            filter: blur(0px);
-    opacity: 1;
-  }
-}
 
 #root {
   max-width: 1280px;
@@ -124,7 +100,7 @@ h5{
   letter-spacing: .15em;
   width: 0;                           /* start hidden */
   animation:
-    typing 3.5s steps(20, end) forwards,
+    typing 2.5s steps(22, end) forwards,
     blink-caret .75s step-end infinite;
 }
 

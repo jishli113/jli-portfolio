@@ -88,7 +88,7 @@ function App() {
         <Grid container spacing={{ xs: 3, md: 4 }} columns={{ xs: 4, sm: 8, md: 12 }}>
             {Array.from(projectStore).map((project) => (
               <Grid size={{ xs: 2, sm: 4, md: 4 }}>
-                <Project title = {project.title} description = {project.description} tools={project.tools} className="project"/>
+                <Project title = {project.title} description = {project.description} tools={project.tools} github={project.github} className="project"/>
               </Grid>
             ))}
 </Grid>

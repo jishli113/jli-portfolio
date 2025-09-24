@@ -12,8 +12,28 @@
             "title":"Chess Analysis Chrome Extension",
             "date":"feb 2024",
             "description":"This google chrome extension allows users to immediately transport their Chess.com games into a Lichess analysis board through web scraping. Users also have the capabilities of creating an account and saving certain games for future quick access. Persisted authentication and database procedures are handled using firebase. the code is written using Javascript and utilizes the Google Chrome and Lichess APIs.",
-            "github":"https://github.com/jishli113/Semi-Supervised-Image-Classification",
+            "github":"https://github.com/jishli113/LiChessCom",
             "tools":["javascript","nodejs","firebase","chesscom api"]
+        },
+        {"title":"Calendar Social Media Web Application",
+        "date":"dec 2023",
+        "description":"Calendly is a web-based social media website I'm currently building using a PERN stack. The website is a calendar-based social media in which users can add 'events', friends, and receive notifications. Users can view their own events in daily or weekly form and can view user profiles in the social section. In their feed, users can view their friends' current active events as they are updated. User authentication is handled by Firebase and pgAgent is used for event refreshing.",
+        "github":"https://github.com/jishli113/calendly",
+        "tools":["react","javascript","postgres","express", "nodejs","bootstrap", "oauth"]
+    },
+        {
+            "title":"Discord Wordcount Bot",
+            "date":"sept 2022",
+            "description": "I created a discord bot using Python and the Discord Developer API. This bot's functionality consists of tracking words/phrases said by all registered users and returning their data in different forms on command. Some commands that this bot features are returning a user's most frequently typed words in decreasing order, comparing two users' word count for a specified word, and a global leaderboard for an input word.",
+            "github": "https://github.com/jishli113/Discord-Wordcount-Bot",
+            "tools":["python", "discord api", "sqlite3", "sql", "apis"]
+        },
+        {
+            "title":"Chess Game",
+            "date":"aug 2021",
+            "description":"I created this chess game using Java for the base code and JavaFX for generating the chess board GUI. This is a fully functioning chess game with an implemented move detector system that indicates all possible squares for a certain selected chess piece.",
+            "github": "https://github.com/jishli113/CHESS",
+            "tools":["java", "javafx", "object oriented programming","data structures", "algorithms"]
         }
     ]
 }
