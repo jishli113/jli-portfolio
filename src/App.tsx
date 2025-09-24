@@ -10,6 +10,7 @@ import { Email, LinkedIn, GitHub } from '@mui/icons-material'
 import Project from './Project'
 import { useRef } from 'react'
 import portrait from "./public/images/portrait.png"
+import resumePdf from "./public/static/jli-resume.pdf"
 
 function App() {
   const workRef = useRef<HTMLDivElement | null>(null);
@@ -26,6 +27,9 @@ function App() {
   const handleProjectScrollClick = () =>{
         projectsRef.current?.scrollIntoView({"behavior":"smooth"});
   };
+  const displayResume = () => {
+    window.open(resumePdf, '_blank', 'noopener,noreferrer');
+  };
   return (
     <>
     <Box className="app-bar" position="fixed" zIndex={1000}>
@@ -38,7 +42,7 @@ function App() {
           <Button disableFocusRipple disableTouchRipple><h3 className="appbar-text">about me</h3></Button>
         </Stack>
         <Stack direction="row" spacing={1} className="menu-right-bar">
-          <Button disableRipple><h3 className="appbar-text">resume</h3></Button>
+          <Button disableRipple onClick={displayResume}><h3 className="appbar-text">resume</h3></Button>
         </Stack>
       </Toolbar>
     </AppBar>
