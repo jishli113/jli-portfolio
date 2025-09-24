@@ -50,11 +50,7 @@
 .work-section-title{
   width: 100vw;
 }
-.work-section{
-  width: 100%;
-  place-items: center;
-}
-.project-section{
+.section{
   width: 100%;
   place-items: center;
 }
@@ -135,4 +131,10 @@ h5{
   text-transform: lowercase;
   color: #fbf1c7;
   font-size: 13px;
+}
+.about-me-text{
+  font-family: "MesloFont";
+  text-transform: lowercase;
+  color: #fbf1c7;
+  font-size: 18px;
 }

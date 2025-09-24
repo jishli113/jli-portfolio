@@ -16,6 +16,7 @@ function App() {
   const workRef = useRef<HTMLDivElement | null>(null);
   const projectsRef = useRef<HTMLDivElement | null>(null);
   const homeRef = useRef<HTMLDivElement | null>(null);
+  const aboutMeRef = useRef<HTMLDivElement | null>(null);
   const worksStore: workInterface[] = works.works;
   const projectStore: projectInterface[] = projects.projects;
   const handleWorkScrollClick = () =>{
@@ -27,6 +28,9 @@ function App() {
   const handleProjectScrollClick = () =>{
         projectsRef.current?.scrollIntoView({"behavior":"smooth"});
   };
+  const handleAboutMeScrollClick = () =>{
+    aboutMeRef.current?.scrollIntoView({"behavior":"smooth"});
+  }
   const displayResume = () => {
     window.open(resumePdf, '_blank', 'noopener,noreferrer');
   };
@@ -39,7 +43,7 @@ function App() {
           <Button disableRipple onClick={handleHomeScrollClick}><h3 className="appbar-text">home</h3></Button>
           <Button disableRipple onClick={handleWorkScrollClick}><h3 className="appbar-text">experience</h3></Button>
           <Button disableRipple onClick={handleProjectScrollClick}><h3 className="appbar-text">projects</h3></Button>
-          <Button disableFocusRipple disableTouchRipple><h3 className="appbar-text">about me</h3></Button>
+          <Button disableFocusRipple disableTouchRipple onClick={handleAboutMeScrollClick}><h3 className="appbar-text">about me</h3></Button>
         </Stack>
         <Stack direction="row" spacing={1} className="menu-right-bar">
           <Button disableRipple onClick={displayResume}><h3 className="appbar-text">resume</h3></Button>
@@ -81,7 +85,7 @@ function App() {
       <img src={portrait} className='portrait-img'></img>
     </Box>
     </Box>
-    <Box className="work-section" ref={workRef}>
+    <Box className="section" ref={workRef}>
       <Stack direction={'row'} spacing={2} className="work-section-title">
         <Box className="work-section-work-div">
           <h4>work</h4>
@@ -99,7 +103,7 @@ function App() {
       ))}
       </Stack>
     </Box>
-    <Box className="project-section" ref={projectsRef}>
+    <Box className="section" ref={projectsRef}>
       <Stack direction={'row'} spacing={2} className="work-section-title">
         <Box className="work-section-work-div">
           <h4>projects</h4>
@@ -116,6 +120,21 @@ function App() {
               </Grid>
             ))}
 </Grid>
+      </Box>
+    </Box>
+        <Box className="section" ref={aboutMeRef}>
+      <Stack direction={'row'} spacing={2} className="work-section-title">
+        <Box className="work-section-work-div">
+          <h4>about me</h4>
+        </Box>
+        <Box className="work-section-title-line-div">
+          <div className="horizontal-line"></div>
+        </Box>
+      </Stack>
+      <Box>
+        <h4 className='about-me-text'>my name is joshua li and i am currently a junior at the university of california santa cruz majoring in computer science and minoring in mathematics. i love developing software,
+           especially with new languages and frameworks. some fields that interest me are ai/ml, distributed systems, and backend development.
+            outside of computer science i love exercise, more specifically basketball and running, exploring new food spots, travelling, snowboarding, and playing chess.</h4>
       </Box>
     </Box>
     </>
