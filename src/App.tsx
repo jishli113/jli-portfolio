@@ -73,7 +73,7 @@ function App() {
         </Stack>
       </Box>
       <Box position="absolute" right="10%">
-      <img src='../public/images/portrait.png' className='portrait-img'></img>
+      <img src='./public/images/portrait.png' className='portrait-img'></img>
     </Box>
     </Box>
     <Box className="work-section" ref={workRef}>
