@@ -62,7 +62,7 @@ function App() {
             </span>
           </Box>
           <Stack direction="column" spacing="1%">
-            <h5>uc santa cruz '26</h5>
+            <h5>b.s. computer science @ uc santa cruz</h5>
             <h5>san jose, ca</h5>
           </Stack>
 
