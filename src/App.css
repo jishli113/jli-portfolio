@@ -28,8 +28,9 @@
   color: #fbf1c7;
 }
 .portrait-img{
-  width: 20vw;
-  height: 52vh;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain; /* or cover depending on your needs */
   border-radius: 60px;
   border-color: #d79921;
   border-width: 5px;

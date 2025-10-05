@@ -1,5 +1,5 @@
 
-import {Box, Stack, Link, Grid, AppBar, Button, Toolbar} from '@mui/material'
+import {Box, Stack, Link, Grid, AppBar, Button, Toolbar, Container} from '@mui/material'
 import Work from './Work'
 import './App.css'
 import works from "./values/work.json"
@@ -36,73 +36,100 @@ function App() {
   };
   return (
     <>
-    <Box className="app-bar" position="fixed" zIndex={1000}>
-    <AppBar className="menu-bar" position="static" style={{backgroundColor:'#282828'}} elevation={0}>
-      <Toolbar>
-        <Stack direction="row" spacing={1} className='menu-options-stack'>
-          <Button disableRipple onClick={handleHomeScrollClick}><h3 className="appbar-text">home</h3></Button>
-          <Button disableRipple onClick={handleWorkScrollClick}><h3 className="appbar-text">experience</h3></Button>
-          <Button disableRipple onClick={handleProjectScrollClick}><h3 className="appbar-text">projects</h3></Button>
-          <Button disableFocusRipple disableTouchRipple onClick={handleAboutMeScrollClick}><h3 className="appbar-text">about me</h3></Button>
-        </Stack>
-        <Stack direction="row" spacing={1} className="menu-right-bar">
-          <Button disableRipple onClick={displayResume}><h3 className="appbar-text">resume</h3></Button>
-        </Stack>
-      </Toolbar>
-    </AppBar>
-    </Box>
-    <Box className="intro-section"  ref = {homeRef} position="relative" marginBottom="38%" marginTop="5%">
-      <Box position="absolute" left="10%">
-        <Stack direction="column" spacing="3%" textAlign="start">
-          <Box>
-            <span className="intro-text">
-              <span className='intro-hi'>hi! </span>
-              <span className='intro-middle-text'>my name is </span>
-              <span className="intro-name">josh.</span>
-            </span>
-          </Box>
-          <Stack direction="column" spacing="1%">
-            <h5>b.s. computer science @ uc santa cruz</h5>
-            <h5>san jose, ca</h5>
-          </Stack>
+<Box>
+<AppBar position="fixed" elevation={0} sx={{ bgcolor: "#282828", zIndex: 1000 }}>
+<Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
+<Stack direction="row" spacing={1} sx={{ alignItems: "center" }}>
+<Button disableRipple onClick={handleHomeScrollClick}><h3 className="appbar-text">home</h3></Button>
+<Button disableRipple onClick={handleWorkScrollClick}><h3 className="appbar-text">experience</h3></Button>
+<Button disableRipple onClick={handleProjectScrollClick}><h3 className="appbar-text">projects</h3></Button>
+<Button disableRipple disableTouchRipple onClick={handleAboutMeScrollClick}><h3 className="appbar-text">about me</h3></Button>
+</Stack>
+<Stack direction="row" spacing={1}>
+<Button disableRipple onClick={displayResume}><h3 className="appbar-text">resume</h3></Button>
+</Stack>
+</Toolbar>
+</AppBar>
 
-          <h5 className=''>
-            links:
-          </h5>
 
-          <Stack direction="row" spacing="3%">
-            <Link href="https://www.linkedin.com/in/joshua-li-8489771b2/" target="_blank" rel="noopener noreferrer">
-              <LinkedIn/> 
-            </Link>
-            <Link href="https://github.com/jishli113" target="_blank" rel="noopener noreferrer">
-              <GitHub/>
-            </Link>
-            <Email/>
-          </Stack>
-        </Stack>
-      </Box>
-      <Box position="absolute" right="10%">
-      <img src={portrait} className='portrait-img'></img>
-    </Box>
-    </Box>
-    <Box className="section" ref={workRef}>
-      <Stack direction={'row'} spacing={2} className="work-section-title">
-        <Box className="work-section-work-div">
-          <h4>work</h4>
-        </Box>
-        <Box className="work-section-title-line-div">
-          <div className="horizontal-line"></div>
-        </Box>
-      </Stack>
-      <Stack direction={'column'} spacing={3} className='work-stack'>
-        {worksStore.map((work) => (
-        <>
-          <Work description={work.description} workDates = {work.workDates}
-            workplace = {work.workplace} workTitle={work.workTitle} location={work.location} className="work-card"/>
-        </>
-      ))}
-      </Stack>
-    </Box>
+<Toolbar />
+
+
+{/* Intro Section */}
+<Box ref={homeRef} sx={{ position: "relative", py: { xs: 6, sm: 8, md: 10 }, bgcolor: "transparent" }}>
+<Container maxWidth="lg">
+{/* Use Grid to guarantee no overlap at any size */}
+<Box component={"section"}>
+<Box sx={{ display: { xs: "block", md: "none" }, mb: 2 }} />
+<Box>
+<Box
+sx={{
+display: "grid",
+gridTemplateColumns: { xs: "1fr", md: "1fr 1fr" },
+columnGap: { xs: 0, md: 24 }, // increased gap between text and image
+rowGap: { xs: 6, md: 0 },
+alignItems: { md: "center" },
+}}
+>
+{/* Left column: intro text */}
+<Box sx={{
+minWidth: 0,
+maxWidth: "100%",
+wordBreak: "break-word",
+}}>
+<Box>
+<span className="intro-text">
+<span className="intro-hi">hi! </span>
+<span className="intro-middle-text">my name is </span>
+<span className="intro-name">josh.</span>
+</span>
+</Box>
+
+
+<Stack direction="column" spacing="1%" sx={{ mt: 1 }}>
+<h5>b.s. computer science @ uc santa cruz</h5>
+<h5>san jose, ca</h5>
+</Stack>
+
+
+<h5 style={{ marginTop: 16 }}>links:</h5>
+<Stack direction="row" spacing={2} alignItems="center" sx={{ flexWrap: "wrap" }}>
+<Link href="https://www.linkedin.com/in/joshua-li-8489771b2/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+<LinkedIn />
+</Link>
+<Link href="https://github.com/jishli113" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+<GitHub />
+</Link>
+<Link href="mailto:your.email@example.com" aria-label="Email">
+<Email />
+</Link>
+</Stack>
+</Box>
+
+
+{/* Right column: responsive portrait */}
+<Box sx={{ display: "flex", justifyContent: { xs: "flex-start", md: "flex-end" } }}>
+<Box
+component="img"
+className="portrait-img"
+src={portrait}
+alt="portrait"
+sx={{
+width: "100%",
+maxWidth: { xs: 560, sm: 620, md: 680, lg: 760 },
+height: "auto",
+objectFit: "contain",
+borderRadius: 2,
+overflow: "hidden",
+}}
+/>
+</Box>
+</Box>
+</Box>
+</Box>
+</Container>
+</Box>
+</Box>
     <Box className="section" ref={projectsRef}>
       <Stack direction={'row'} spacing={2} className="work-section-title">
         <Box className="work-section-work-div">
