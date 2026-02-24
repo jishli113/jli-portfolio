@@ -84,15 +84,16 @@ function App() {
               </Stack>
 
              <h5 style={{ marginTop: 16 }}>links:</h5>
-<Stack direction="row" spacing={2}>
+<Stack direction="row" spacing={2} sx={{ justifyContent: "center", alignItems: "center" }}>
   <IconButton
     component={Link}
     href="https://www.linkedin.com/in/joshua-li-8489771b2/"
     target="_blank"
     rel="noopener noreferrer"
     aria-label="LinkedIn"
+    sx={{ color: "#fbf1c7", "&:hover": { color: "#fbf1c7", opacity: 0.8 } }}
   >
-    <LinkedIn fontSize="large" />
+    <LinkedIn sx={{ fontSize: 40 }} />
   </IconButton>
 
   <IconButton
@@ -101,16 +102,18 @@ function App() {
     target="_blank"
     rel="noopener noreferrer"
     aria-label="GitHub"
+    sx={{ color: "#fbf1c7", "&:hover": { color: "#fbf1c7", opacity: 0.8 } }}
   >
-    <GitHub fontSize="large" />
+    <GitHub sx={{ fontSize: 40 }} />
   </IconButton>
 
   <IconButton
     component={Link}
     href="mailto:your.email@example.com"
     aria-label="Email"
+    sx={{ color: "#fbf1c7", "&:hover": { color: "#fbf1c7", opacity: 0.8 } }}
   >
-    <Email fontSize="large" />
+    <Email sx={{ fontSize: 40 }} />
   </IconButton>
 </Stack>
             </Box>
